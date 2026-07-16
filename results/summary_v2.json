@@ -5,21 +5,24 @@
     "A_original": {
       "mean_wer_pct": 71.19838748198873,
       "std_wer_pct": 73.05771623397649,
-      "bootstrap_ci_95": [
-        65.53126235519042,
-        77.4421496157534
-      ],
-      "shapiro_wilk_p": 2.5799656850154632e-33,
       "median_wer_pct": 62.5,
       "iqr_wer_pct": [
         20.0,
         100.0
       ],
-      "median_bootstrap_ci_95": [
+      "bootstrap_ci_mean_95": [
+        65.53126235519042,
+        77.4421496157534
+      ],
+      "bootstrap_ci_median_95": [
         50.0,
         90.6533520826999
       ],
-      "distribution_by_range_pct": {
+      "shapiro_wilk": {
+        "statistic": 0.650546187175768,
+        "p_value": 2.579965980141938e-33
+      },
+      "distribution_pct": {
         "0-10%": 11.092715231788079,
         "10-30%": 22.516556291390728,
         "30-100%": 23.344370860927153,
@@ -30,21 +33,24 @@
     "B_pt_pinned": {
       "mean_wer_pct": 41.78408244114199,
       "std_wer_pct": 67.34755792479662,
-      "bootstrap_ci_95": [
-        36.70304352216778,
-        47.22648406702121
-      ],
-      "shapiro_wilk_p": 1.3702507541008611e-39,
       "median_wer_pct": 25.63901930099113,
       "iqr_wer_pct": [
         13.333333333333334,
         48.30623306233062
       ],
-      "median_bootstrap_ci_95": [
+      "bootstrap_ci_mean_95": [
+        36.70304352216778,
+        47.22648406702121
+      ],
+      "bootstrap_ci_median_95": [
         23.371848739495796,
         28.98985782768116
       ],
-      "distribution_by_range_pct": {
+      "shapiro_wilk": {
+        "statistic": 0.43960327719993003,
+        "p_value": 1.3702509062679062e-39
+      },
+      "distribution_pct": {
         "0-10%": 18.70860927152318,
         "10-30%": 36.423841059602644,
         "30-100%": 31.95364238410596,
@@ -53,10 +59,10 @@
       }
     }
   },
-  "paired_test_A_vs_B": {
-    "wilcoxon_stat": 6561.0,
+  "paired_test": {
+    "statistic": 6561.0,
     "p_value": 7.571099169613832e-42,
-    "cohens_d": 0.34956342025052206,
-    "mean_diff_pct_points": 29.414305040846745
+    "cohen_d": 0.34956342025052206,
+    "mean_diff": 29.414305040846745
   }
 }
