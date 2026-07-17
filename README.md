@@ -32,7 +32,8 @@ Esses valores são armazenados em [results/summary_v2.json](results/summary_v2.j
 
 - [notebooks/replicat_eureka_minds.ipynb](notebooks/replicat_eureka_minds.ipynb): notebook principal com todo o fluxo experimental.
 - [requirements.txt](requirements.txt): dependências Python necessárias para executar o experimento.
-- [scripts/calcular_mediana.py](scripts/calcular_mediana.py): script auxiliar para calcular estatísticas robustas a partir dos resultados salvos.
+- [docs/results_dictionary.md](docs/results_dictionary.md): documento com a descrição dos principais campos e significados dos arquivos de resultados.
+- [scripts/calcular_estatisticas.py](scripts/calcular_estatisticas.py): script auxiliar para calcular estatísticas a partir dos resultados salvos.
 - [results/](results/): pasta com os artefatos produzidos pela execução.
 
 ### Conteúdo da pasta results
@@ -71,13 +72,21 @@ O notebook também inclui uma estratégia de fallback para GPUs com menos VRAM, 
 
 ### Opção A: localmente
 
-1. Crie um ambiente virtual e instale as dependências:
+1. Crie e ative um ambiente virtual (venv) antes de instalar qualquer dependência:
+   ```bash
+   python -m venv .venv
+   .\.venv\Scripts\activate
+   ```
+   Se estiver no Linux/macOS, use `source .venv/bin/activate`.
+2. Instale as dependências dentro desse ambiente:
    ```bash
    pip install -r requirements.txt
    ```
-2. Abra o notebook [notebooks/replicat_eureka_minds.ipynb](notebooks/replicat_eureka_minds.ipynb).
-3. Execute as células em ordem.
-4. Aguarde o download do modelo e o processamento das amostras.
+3. Abra o notebook [notebooks/replicat_eureka_minds.ipynb](notebooks/replicat_eureka_minds.ipynb).
+4. Execute as células em ordem.
+5. Aguarde o download do modelo e o processamento das amostras.
+
+> Para rodar o script de análise estatística [scripts/calcular_estatisticas.py](scripts/calcular_estatisticas.py), também é recomendável usar o mesmo ambiente virtual criado acima, pois as dependências precisam estar instaladas nesse contexto.
 
 ### Opção B: Google Colab
 
@@ -103,6 +112,6 @@ O notebook também inclui uma estratégia de fallback para GPUs com menos VRAM, 
 
 ## 9. Como explorar os resultados
 
-Se quiser revisar as estatísticas de forma mais direta, pode usar o script [scripts/calcular_mediana.py](scripts/calcular_mediana.py) para complementar a análise com medidas robustas como mediana, IQR e distribuição por faixas de WER.
+Se quiser revisar as estatísticas de forma mais direta, pode usar o script [scripts/calcular_estatisticas.py](scripts/calcular_estatisticas.py) para complementar a análise com medidas robustas como mediana, IQR e distribuição por faixas de WER.
 
 Este repositório foi pensado como uma base documental e reprodutível para o experimento, permitindo que futuras leituras compreendam não só o código, mas também o contexto científico e metodológico da replicação.
