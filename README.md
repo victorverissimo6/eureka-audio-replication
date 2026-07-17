@@ -1,6 +1,6 @@
 # Eureka Audio Replication
 
-[DOI Zenodo](https://doi.org/10.5281/zenodo.21252104)
+[DOI Zenodo](https://doi.org/10.5281/zenodo.21252103)
 Este repositório reúne o material necessário para reproduzir um experimento de replicação do trabalho "Eureka-Audio: Triggering Audio Intelligence in Compact Language Models", com foco na tarefa de reconhecimento automático de fala (ASR) em português europeu.
 
 O projeto foi organizado para que qualquer pessoa que volte a este repositório no futuro consiga entender: qual era o objetivo do experimento, como ele foi conduzido, quais arquivos foram gerados e como interpretar os resultados.
