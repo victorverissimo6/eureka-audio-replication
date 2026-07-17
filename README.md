@@ -32,7 +32,8 @@ Esses valores são armazenados em [results/summary_v2.json](results/summary_v2.j
 
 - [notebooks/replicat_eureka_minds.ipynb](notebooks/replicat_eureka_minds.ipynb): notebook principal com todo o fluxo experimental.
 - [requirements.txt](requirements.txt): dependências Python necessárias para executar o experimento.
-- [scripts/calcular_mediana.py](scripts/calcular_mediana.py): script auxiliar para calcular estatísticas robustas a partir dos resultados salvos.
+- [docs/results_dictionary.md](docs/results_dictionary.md): documento com a descrição dos principais campos e significados dos arquivos de resultados.
+- [scripts/calcular_estatisticas.py](scripts/calcular_estatisticas.py): script auxiliar para calcular estatísticas a partir dos resultados salvos.
 - [results/](results/): pasta com os artefatos produzidos pela execução.
 
 ### Conteúdo da pasta results
@@ -103,6 +104,6 @@ O notebook também inclui uma estratégia de fallback para GPUs com menos VRAM, 
 
 ## 9. Como explorar os resultados
 
-Se quiser revisar as estatísticas de forma mais direta, pode usar o script [scripts/calcular_mediana.py](scripts/calcular_mediana.py) para complementar a análise com medidas robustas como mediana, IQR e distribuição por faixas de WER.
+Se quiser revisar as estatísticas de forma mais direta, pode usar o script [scripts/calcular_estatisticas.py](scripts/calcular_estatisticas.py) para complementar a análise com medidas robustas como mediana, IQR e distribuição por faixas de WER.
 
 Este repositório foi pensado como uma base documental e reprodutível para o experimento, permitindo que futuras leituras compreendam não só o código, mas também o contexto científico e metodológico da replicação.
